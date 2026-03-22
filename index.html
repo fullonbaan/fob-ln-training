@@ -101,7 +101,14 @@ tailwind.config = {
 <div id="urgency-banner" class="fixed top-0 w-full z-[60] gold-gradient text-on-primary text-center py-2 px-4 font-label text-xs sm:text-sm font-bold tracking-wide">
   <span class="inline-flex items-center gap-2 flex-wrap justify-center">
     <span class="animate-pulse">&#9679;</span>
-    Next Batch Starts <span class="underline underline-offset-2">April 1, 2026</span> &mdash; Limited Seats Available
+    Next Batch Starts April 1 &mdash;
+    <span id="countdown" class="inline-flex items-center gap-1.5 font-mono tracking-tight">
+      <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-days">--</span>d</span>
+      <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-hrs">--</span>h</span>
+      <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-mins">--</span>m</span>
+      <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-secs">--</span>s</span>
+    </span>
+    left!
     <a href="#booking" class="ml-2 inline-block bg-white/20 hover:bg-white/30 text-white px-3 py-0.5 rounded-full transition-colors text-xs">Enroll Now &rarr;</a>
   </span>
 </div>
@@ -174,15 +181,15 @@ tailwind.config = {
           </tr>
         </thead>
         <tbody class="divide-y divide-outline-variant/10">
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Finance</td><td class="px-8 py-5 text-secondary">GL, AP, AR, Cash Mgmt, FAM</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Logistics &amp; Supply Chain</td><td class="px-8 py-5 text-secondary">Sales, Purchase, Warehousing, Freight</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Manufacturing &amp; Production</td><td class="px-8 py-5 text-secondary">BOM, Routing, SFC, Project, ECM</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Planning &amp; Scheduling</td><td class="px-8 py-5 text-secondary">MRP, MPS, OPP, SIC, CTP</td><td class="px-8 py-5">26 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Administration &amp; Setup</td><td class="px-8 py-5 text-secondary">Company Setup, Security, DMT, Batch</td><td class="px-8 py-5">30 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Tools &amp; Development</td><td class="px-8 py-5 text-secondary">BODs, UI, BPM, DEM, Charts</td><td class="px-8 py-5">30 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor ION</td><td class="px-8 py-5 text-secondary">ION Desk, Connect, API Gateway, Workflows</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor OS Platform</td><td class="px-8 py-5 text-secondary">Ming.le, IDM, Homepages, Reporting</td><td class="px-8 py-5">Flexible</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
-          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor Extensibility</td><td class="px-8 py-5 text-secondary">Mongoose, Landmark, CloudSuite APIs</td><td class="px-8 py-5">12 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Finance</td><td class="px-8 py-5 text-secondary">General Ledger, Accounts Payable, Accounts Receivable, Cash Management, Fixed Asset Management</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Logistics &amp; Supply Chain</td><td class="px-8 py-5 text-secondary">Sales &amp; Purchase Orders, Warehousing &amp; Inventory, Freight &amp; Shipping, Service Order Management</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Manufacturing &amp; Production</td><td class="px-8 py-5 text-secondary">Bill of Materials &amp; Routing, Shop Floor Control, Project Management, Engineering Change Mgmt</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Planning &amp; Scheduling</td><td class="px-8 py-5 text-secondary">Master Production Scheduling, Material Requirements Planning, Order Point Planning, Capable to Promise</td><td class="px-8 py-5">26 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Administration &amp; Setup</td><td class="px-8 py-5 text-secondary">Company &amp; Multi-site Setup, User Security &amp; Roles, Data Migration Toolkit, Batch Processing &amp; Jobs</td><td class="px-8 py-5">30 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor LN Tools &amp; Development</td><td class="px-8 py-5 text-secondary">BOD Development, UI Customization, BPM / DEM Scripting, Charts &amp; Reports</td><td class="px-8 py-5">30 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor ION</td><td class="px-8 py-5 text-secondary">ION Desk &amp; Workflows, ION Connect &amp; Mappings, API Gateway, Data Lake &amp; Analytics</td><td class="px-8 py-5">25 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor OS Platform</td><td class="px-8 py-5 text-secondary">Ming.le &amp; Homepages, IDM Document Mgmt, Reporting &amp; BI, Infor OS Portal</td><td class="px-8 py-5">Flexible</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
+          <tr class="hover:bg-surface-container-low transition-colors"><td class="px-8 py-5 font-bold text-on-surface">Infor Extensibility</td><td class="px-8 py-5 text-secondary">Mongoose Framework, Landmark Technology, CloudSuite APIs, Custom Extensions</td><td class="px-8 py-5">12 Hours</td><td class="px-8 py-5 text-right"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">Available</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -903,6 +910,40 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="font-label text-sm font-bold hidden sm:inline">Chat with us</span>
 </a>
+
+<!-- ══════════════ Countdown Timer ══════════════ -->
+<script>
+(function(){
+  const target = new Date('2026-04-01T09:00:00+05:30').getTime();
+  const $d = document.getElementById('cd-days');
+  const $h = document.getElementById('cd-hrs');
+  const $m = document.getElementById('cd-mins');
+  const $s = document.getElementById('cd-secs');
+  const $wrap = document.getElementById('countdown');
+
+  function pad(n){ return n < 10 ? '0' + n : n; }
+
+  function tick(){
+    const now = Date.now();
+    const diff = target - now;
+    if(diff <= 0){
+      $wrap.innerHTML = '<span class="bg-white/20 rounded px-2 py-0.5 animate-pulse">Batch is LIVE — Enroll Today!</span>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    $d.textContent = d;
+    $h.textContent = pad(h);
+    $m.textContent = pad(m);
+    $s.textContent = pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
 
 </body>
 </html>
