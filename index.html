@@ -100,8 +100,9 @@ tailwind.config = {
 <!-- ══════════════ Urgency Banner ══════════════ -->
 <div id="urgency-banner" class="fixed top-0 w-full z-[60] gold-gradient text-on-primary text-center py-2 px-4 font-label text-xs sm:text-sm font-bold tracking-wide">
   <span class="inline-flex items-center gap-2 flex-wrap justify-center">
-    <span class="animate-pulse">&#9679;</span>
-    Next Batch Starts April 1 &mdash;
+    <span class="bg-white/20 rounded px-2 py-0.5 text-xs">April 1 Batch &mdash; Fully Booked &amp; Closed</span>
+    <span class="opacity-60">|</span>
+    Next Batch Starts April 15 &mdash;
     <span id="countdown" class="inline-flex items-center gap-1.5 font-mono tracking-tight">
       <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-days">--</span>d</span>
       <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-hrs">--</span>h</span>
@@ -109,7 +110,7 @@ tailwind.config = {
       <span class="bg-white/20 rounded px-1.5 py-0.5"><span id="cd-secs">--</span>s</span>
     </span>
     left!
-    <a href="#booking" class="ml-2 inline-block bg-white/20 hover:bg-white/30 text-white px-3 py-0.5 rounded-full transition-colors text-xs">Enroll Now &rarr;</a>
+    <a href="#booking" class="ml-2 inline-block bg-white/20 hover:bg-white/30 text-white px-3 py-0.5 rounded-full transition-colors text-xs">Reserve Your Seat &rarr;</a>
   </span>
 </div>
 
@@ -942,7 +943,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 <!-- ══════════════ Countdown Timer ══════════════ -->
 <script>
 (function(){
-  const target = new Date('2026-04-01T09:00:00+05:30').getTime();
+  const target = new Date('2026-04-15T09:00:00+05:30').getTime();
   const $d = document.getElementById('cd-days');
   const $h = document.getElementById('cd-hrs');
   const $m = document.getElementById('cd-mins');
