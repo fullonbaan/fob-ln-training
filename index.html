@@ -111,8 +111,7 @@
 <!-- Fonts — preconnect for faster DNS + TLS -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<!-- Preload critical hero image -->
-<link rel="preload" as="image" href="https://courses.fullonbaan.com/og-image.png" fetchpriority="high"/>
+<!-- Hero uses CSS gradient — no image preload needed -->
 <!-- Body & headline fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
 <!-- Icons — non-blocking -->
@@ -244,10 +243,14 @@ tailwind.config = {
 </nav>
 
 <!-- ══════════════ Hero ══════════════ -->
-<header class="relative min-h-screen flex items-center pt-28 overflow-hidden bg-on-surface">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/80 to-transparent z-10"></div>
-    <img alt="Professional corporate Infor LN ERP training session" class="w-full h-full object-cover" src="https://courses.fullonbaan.com/og-image.png" fetchpriority="high" decoding="async"/>
+<header class="relative min-h-screen flex items-center pt-28 overflow-hidden" style="background: radial-gradient(ellipse 80% 60% at 70% 30%, rgba(128,86,0,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 20% 70%, rgba(83,94,122,0.10) 0%, transparent 50%), linear-gradient(160deg, #0c1525 0%, #121c2d 40%, #0e1a2e 100%);">
+  <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+    <!-- Subtle decorative grid overlay -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <!-- Gold accent glow top-right -->
+    <div class="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full opacity-[0.07]" style="background: radial-gradient(circle, #c9943e 0%, transparent 70%);"></div>
+    <!-- Subtle blue accent glow bottom-left -->
+    <div class="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full opacity-[0.05]" style="background: radial-gradient(circle, #535e7a 0%, transparent 70%);"></div>
   </div>
   <div class="relative z-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <div class="space-y-8">
