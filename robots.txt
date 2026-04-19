@@ -1,17 +1,27 @@
 # robots.txt — FullOnBaan Courses (courses.fullonbaan.com)
-# Generated: April 2026
+# Updated: April 2026
 
 User-agent: *
 Allow: /
 
 # Disallow non-content directories
 Disallow: /Others/
-Disallow: /syllabus/
 
 # Allow syllabus PDFs explicitly for indexing
 Allow: /syllabus/*.pdf
 
+# Allow SVG favicon
+Allow: /favicon.svg
+
 # Sitemap location
 Sitemap: https://courses.fullonbaan.com/sitemap.xml
 
-# No crawl-delay — static site with negligible server load
+# Specific Googlebot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
